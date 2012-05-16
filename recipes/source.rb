@@ -57,6 +57,7 @@ remote_file nginx_url do
   source nginx_url
   path src_filepath
   backup false
+  action :create_if_missing
 end
 
 user node[:nginx][:user] do
